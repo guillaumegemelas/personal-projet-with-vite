@@ -9,6 +9,24 @@ export default function Products() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  // Méthode avec fetch----------------------------
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/getnewsbusiness");
+
+        const datafetch = await response.json();
+        console.log(datafetch, "datafetch with fetch--------------");
+
+        setData(datafetch);
+        setIsLoading(false);
+        // console.log(response.data, "reponse.dat-------------------");
+      } catch (error) {}
+    };
+    fetchData();
+  }, []);
+
+  // Méthode avec axios---------------------------- n'en utiliser qu'une seule!
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -17,8 +35,9 @@ export default function Products() {
         );
 
         setData(response.data);
+        console.log(response.data, "response.data avec axios+++++++++++");
         setIsLoading(false);
-        console.log(response.data);
+        // console.log(response.data, "reponse.dat-------------------");
       } catch (error) {}
     };
     fetchData();
