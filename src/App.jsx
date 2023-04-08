@@ -5,7 +5,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //import des composants
 import Header from "./Components/Header";
 import Home from "./pages/Home";
-import Products from "./pages/Products";
+import Business from "./pages/Business";
+import Sport from "./pages/Sport";
+
+//impopt des icones Fontawesome
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+library.add(faHouse);
 
 export default function App() {
   return (
@@ -15,7 +21,8 @@ export default function App() {
         <Routes>
           {/* --test de routing avec react router dom fonctionne avec Vite */}
           <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
+          <Route path="/business" element={<Business />} />
+          <Route path="/sport" element={<Sport />} />
         </Routes>
       </Router>
     </div>
