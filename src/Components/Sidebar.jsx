@@ -38,16 +38,14 @@ export default function Sidebar() {
             </NavLink>
 
             {/* ajouter les liens et les noms dans la Sidebar */}
-            <NavLink exact to="/tables" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="table">Tables</CDBSidebarMenuItem>
+            <NavLink exact to="/business" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="table">Business</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/profile" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="user">Profile page</CDBSidebarMenuItem>
+            <NavLink exact to="/sport" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="user">Sports</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/analytics" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="chart-line">
-                Analytics
-              </CDBSidebarMenuItem>
+            <NavLink exact to="/health" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="chart-line">Santé</CDBSidebarMenuItem>
             </NavLink>
             <NavLink
               exact

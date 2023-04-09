@@ -1,16 +1,12 @@
 import React from "react";
-import axios from "axios";
+
 import { useState, useEffect } from "react";
 import uuid4 from "uuid4";
 import { Link } from "react-router-dom";
-//test requete vers NewsAPI au même titre que site Next fait vers cet API: les deux pointent vers le même backend
-
-//import dans le composant de Fonteaawsome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Sidebar from "../Components/Sidebar";
 
-export default function Business() {
+export default function Health() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -18,29 +14,12 @@ export default function Business() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/getnewsbusiness");
+        const response = await fetch("http://localhost:3000/getnewshealth");
 
         const datafetch = await response.json();
         console.log(datafetch, "datafetch with fetch--------------");
 
         setData(datafetch);
-        setIsLoading(false);
-        // console.log(response.data, "reponse.dat-------------------");
-      } catch (error) {}
-    };
-    fetchData();
-  }, []);
-
-  // Méthode avec axios---------------------------- n'en utiliser qu'une seule!
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "http://localhost:3000/getnewsbusiness"
-        );
-
-        setData(response.data);
-        console.log(response.data, "response.data avec axios+++++++++++");
         setIsLoading(false);
         // console.log(response.data, "reponse.dat-------------------");
       } catch (error) {}
@@ -57,7 +36,7 @@ export default function Business() {
           <FontAwesomeIcon icon="house" />
         </Link> */}
         <h2 className="text-center fw-bolder mb-4 col-12 mx-4 pb-4">
-          Actualités business
+          Actualités santé
         </h2>
       </div>
       {/* pour augmenter la taille des icones avec bootstrap, on utilise fa-xx */}

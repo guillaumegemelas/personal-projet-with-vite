@@ -12,6 +12,7 @@ import Header from "./Components/Header";
 import Home from "./pages/Home";
 import Business from "./pages/Business";
 import Sport from "./pages/Sport";
+import Health from "./pages/Health";
 
 //impopt des icones Fontawesome
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/business" element={<Business />} />
           <Route path="/sport" element={<Sport />} />
+          <Route path="/health" element={<Health />} />
         </Routes>
       </Router>
     </div>
