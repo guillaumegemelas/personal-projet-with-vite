@@ -51,7 +51,7 @@ export default function Business() {
   return isLoading ? (
     <div>chargement</div>
   ) : (
-    <div className="container px-3 pt-5">
+    <div className="container px-3 pt-5 bg-danger">
       <div className="d-flex col-12 align-items-center">
         <Link to={"/"} className="fa-lg col-2  mb-4">
           <FontAwesomeIcon icon="house" />
