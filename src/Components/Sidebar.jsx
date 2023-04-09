@@ -1,5 +1,7 @@
 import React from "react";
 
+//ajout d'une sidebar avec CBDSidebar
+
 //sidebar: npm install cdbreact
 //puis import du package
 import {
@@ -34,6 +36,8 @@ export default function Sidebar() {
             <NavLink exact to="/" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="columns">Home</CDBSidebarMenuItem>
             </NavLink>
+
+            {/* ajouter les liens et les noms dans la Sidebar */}
             <NavLink exact to="/tables" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="table">Tables</CDBSidebarMenuItem>
             </NavLink>
