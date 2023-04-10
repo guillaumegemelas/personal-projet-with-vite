@@ -20,6 +20,7 @@ export default function Sidebar() {
     <div
       style={{ display: "flex", height: "100vh", overflow: "scroll initial" }}
     >
+      {/* j'ai supprimé exact et activeClassName car erreurs dans la console */}
       <CDBSidebar textColor="#fff" backgroundColor="#0C6DFD">
         <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
           <a
@@ -27,35 +28,40 @@ export default function Sidebar() {
             className="text-decoration-none"
             style={{ color: "inherit" }}
           >
-            Sidebar
+            Menu
           </a>
         </CDBSidebarHeader>
 
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
-            <NavLink exact to="/" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="columns">Home</CDBSidebarMenuItem>
+            <NavLink to="/" className="">
+              <CDBSidebarMenuItem icon="igloo">Home</CDBSidebarMenuItem>
             </NavLink>
 
             {/* ajouter les liens et les noms dans la Sidebar */}
-            <NavLink exact to="/business" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="table">Business</CDBSidebarMenuItem>
+            <NavLink to="/business" className="">
+              <CDBSidebarMenuItem icon="chart-line">
+                Business
+              </CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/sport" activeClassName="activeClicked">
+            <NavLink to="/sport" className="">
               <CDBSidebarMenuItem icon="user">Sports</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/health" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="chart-line">Santé</CDBSidebarMenuItem>
+            <NavLink to="/health" className="">
+              <CDBSidebarMenuItem icon="stethoscope">Santé</CDBSidebarMenuItem>
             </NavLink>
             <NavLink
-              exact
-              to="/hero404"
-              target="_blank"
-              activeClassName="activeClicked"
+              to="/entertainement"
+              //si on veut ouvrir dans une autre page
+              // target="_blank"
+              className=""
             >
-              <CDBSidebarMenuItem icon="exclamation-circle">
-                404 page
+              <CDBSidebarMenuItem icon="feather">
+                Entertainement
               </CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink to="/tech" className="bg-primary">
+              <CDBSidebarMenuItem icon="laptop">Tech</CDBSidebarMenuItem>
             </NavLink>
           </CDBSidebarMenu>
         </CDBSidebarContent>

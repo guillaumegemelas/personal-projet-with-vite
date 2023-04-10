@@ -14,7 +14,7 @@ import { MDBSpinner } from "mdb-react-ui-kit";
 //import des composants
 import Sidebar from "../Components/Sidebar";
 
-export default function Business() {
+export default function Entertainement() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -22,7 +22,9 @@ export default function Business() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/getnewsbusiness");
+        const response = await fetch(
+          "http://localhost:3000/getnewsentertainment"
+        );
 
         const datafetch = await response.json();
         console.log(datafetch, "datafetch with fetch--------------");
@@ -40,7 +42,7 @@ export default function Business() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/getnewsbusiness"
+          "http://localhost:3000/getnewsentertainment"
         );
 
         setData(response.data);
@@ -65,7 +67,7 @@ export default function Business() {
           <FontAwesomeIcon icon="house" />
         </Link> */}
         <h2 className="text-center fw-bolder mb-4 col-12 mx-4 pb-4">
-          Actualités Business
+          Actualités Entertainement
         </h2>
       </div>
       {/* pour augmenter la taille des icones avec bootstrap, on utilise fa-xx */}

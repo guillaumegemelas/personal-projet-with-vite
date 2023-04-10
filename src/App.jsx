@@ -13,10 +13,13 @@ import Home from "./pages/Home";
 import Business from "./pages/Business";
 import Sport from "./pages/Sport";
 import Health from "./pages/Health";
+import Entertainement from "./pages/Entertainement";
+import Tech from "./pages/Tech";
 
 //impopt des icones Fontawesome
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
+
 library.add(faHouse);
 
 export default function App() {
@@ -24,13 +27,14 @@ export default function App() {
     <div>
       <Router>
         <Header />
-
         <Routes>
           {/* --test de routing avec react router dom fonctionne avec Vite */}
           <Route path="/" element={<Home />} />
           <Route path="/business" element={<Business />} />
           <Route path="/sport" element={<Sport />} />
           <Route path="/health" element={<Health />} />
+          <Route path="/entertainement" element={<Entertainement />} />
+          <Route path="/tech" element={<Tech />} />
         </Routes>
       </Router>
     </div>

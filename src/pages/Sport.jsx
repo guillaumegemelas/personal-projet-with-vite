@@ -48,7 +48,7 @@ export default function Sport() {
   }, []);
 
   return isLoading ? (
-    <div className="container px-1 pt-5 d-flex justify-content-center align-items-center">
+    <div className="container px-1 pt-5 d-flex justify-content-center align-items-center vh-100">
       <MDBSpinner color="primary" role="status">
         <span className="visually-hidden">Loading...</span>
       </MDBSpinner>
@@ -60,7 +60,7 @@ export default function Sport() {
         <FontAwesomeIcon icon="house" />
       </Link> */}
         <h2 className="text-center fw-bolder mb-4 col-12 mx-4 pb-4">
-          Actualités sports
+          Actualités Sports
         </h2>
       </div>
       {/* pour augmenter la taille des icones avec bootstrap, on utilise fa-xx */}

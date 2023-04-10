@@ -5,16 +5,13 @@ import uuid4 from "uuid4";
 import { Link } from "react-router-dom";
 //test requete vers NewsAPI au même titre que site Next fait vers cet API: les deux pointent vers le même backend
 
-//import dans le composant de Fonteaawsome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 //import du spinner
 import { MDBSpinner } from "mdb-react-ui-kit";
 
 //import des composants
 import Sidebar from "../Components/Sidebar";
 
-export default function Business() {
+export default function Tech() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -22,7 +19,7 @@ export default function Business() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/getnewsbusiness");
+        const response = await fetch("http://localhost:3000/getnewstech");
 
         const datafetch = await response.json();
         console.log(datafetch, "datafetch with fetch--------------");
@@ -39,9 +36,7 @@ export default function Business() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:3000/getnewsbusiness"
-        );
+        const response = await axios.get("http://localhost:3000/getnewstech");
 
         setData(response.data);
         console.log(response.data, "response.data avec axios+++++++++++");
@@ -62,10 +57,10 @@ export default function Business() {
     <div className="container px-1 pt-5">
       <div className="d-flex col-12 align-items-center">
         {/* <Link to={"/"} className="fa-lg col-2  mb-4">
-          <FontAwesomeIcon icon="house" />
-        </Link> */}
+        <FontAwesomeIcon icon="house" />
+      </Link> */}
         <h2 className="text-center fw-bolder mb-4 col-12 mx-4 pb-4">
-          Actualités Business
+          Actualités Tech
         </h2>
       </div>
       {/* pour augmenter la taille des icones avec bootstrap, on utilise fa-xx */}

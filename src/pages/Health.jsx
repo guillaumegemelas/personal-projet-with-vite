@@ -32,10 +32,13 @@ export default function Health() {
   }, []);
 
   return isLoading ? (
-    <div className="container px-1 pt-5 d-flex justify-content-center align-items-center">
+    <div className="container px-1 pt-5 d-flex justify-content-center align-items-center vh-100">
       <MDBSpinner color="primary" role="status">
         <span className="visually-hidden">Loading...</span>
       </MDBSpinner>
+
+      {/* on peut faire un spinner type grow */}
+      {/* <MDBSpinner grow color="primary"> */}
     </div>
   ) : (
     <div className="container px-1 pt-5">
@@ -44,7 +47,7 @@ export default function Health() {
           <FontAwesomeIcon icon="house" />
         </Link> */}
         <h2 className="text-center fw-bolder mb-4 col-12 mx-4 pb-4">
-          Actualités santé
+          Actualités Santé
         </h2>
       </div>
       {/* pour augmenter la taille des icones avec bootstrap, on utilise fa-xx */}
