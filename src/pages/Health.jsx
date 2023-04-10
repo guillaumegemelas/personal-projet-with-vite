@@ -4,6 +4,10 @@ import { useState, useEffect } from "react";
 import uuid4 from "uuid4";
 import { Link } from "react-router-dom";
 
+//import du spinner
+import { MDBSpinner } from "mdb-react-ui-kit";
+
+//import des composants
 import Sidebar from "../Components/Sidebar";
 
 export default function Health() {
@@ -28,7 +32,11 @@ export default function Health() {
   }, []);
 
   return isLoading ? (
-    <div>chargement</div>
+    <div className="container px-1 pt-5 d-flex justify-content-center align-items-center">
+      <MDBSpinner color="primary" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </MDBSpinner>
+    </div>
   ) : (
     <div className="container px-1 pt-5">
       <div className="d-flex col-12 align-items-center">
