@@ -18,7 +18,7 @@ export default function Entertainement() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Méthode avec fetch----------------------------
+  // Méthode avec fetch-------------------------------
   useEffect(() => {
     const fetchData = async () => {
       try {

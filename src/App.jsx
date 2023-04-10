@@ -28,7 +28,7 @@ export default function App() {
       <Router>
         <Header />
         <Routes>
-          {/* --test de routing avec react router dom fonctionne avec Vite */}
+          {/* --test de routing avec react router dom fonctionne avec Vite! */}
           <Route path="/" element={<Home />} />
           <Route path="/business" element={<Business />} />
           <Route path="/sport" element={<Sport />} />
