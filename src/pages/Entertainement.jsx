@@ -72,7 +72,7 @@ export default function Entertainement() {
       </div>
       {/* pour augmenter la taille des icones avec bootstrap, on utilise fa-xx */}
 
-      {/* test ajout carte googlemap */}
+      {/* test ajout carte googlemap--------- */}
       <div className="d-flex col-12">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92588.97853915307!2d4.170367499999999!3d43.51473445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b69124a10b842b%3A0x4078821166b4080!2sLe%20Grau-du-Roi!5e0!3m2!1sfr!2sfr!4v1681248811862!5m2!1sfr!2sfr"
